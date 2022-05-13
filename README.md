@@ -53,6 +53,8 @@ curl -L https://github.com/modood/vimrc/raw/master/install.sh | bash
 
 ### Leader
 
+<Leader> is `\ `
+
 | key | description | plugin |
 |:----|:------------|:-------|
 | `<Leader>q` | Exit | - |
@@ -64,7 +66,6 @@ curl -L https://github.com/modood/vimrc/raw/master/install.sh | bash
 | `<Leader>tb` | toggle (add or remove) a breakpoint | vim-delve |
 | `<Leader>tc` | clear all the breakpoints and tracepoints | vim-delve |
 | `<Leader>tm`| enable / disable table mode | vim-table-mode |
-| `<Leader>y` | Chinese copywriting guidelines for better written communication | hotoo/pangu.vim |
 | `<Leader>u` | - | - |
 | `<Leader>i` | implementing an interface | vim-go |
 | `<Leader>o` | Show declarations for the current file<br/>Generate table of contents for markdown | vim-go<br/>vim-markdown-toc |

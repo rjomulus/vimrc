@@ -42,6 +42,8 @@ curl -L $repo/plugins/yank_mapping.vim > $bundle/nerdtree/nerdtree_plugin/yank_m
 
 # install npm dependencies
 command -v instant-markdown-d >/dev/null 2>&1 || npm install -g https://github.com/mwnf/instant-markdown-d.git
+npm install -g git-run
+sudo easy_install -U git-up
 
 # Setup neovim (builds from source, works with macOS -- tested on 11.4 (20F71)
 echo "Setting up neovim!"
@@ -59,3 +61,16 @@ rm -rf ~/Documents/dev/neovim
 mkdir -p ~/.config/nvim
 echo -e "set runtimepath^=~/.vim runtimepath+=~/.vim/after\nlet &packpath=&runtimepath\nsource ~/.vimrc" > ~/.config/nvim/init.vim
 
+echo "Installing tmux, fzf, ripgrep"
+brew install tmux fzf ripgrep
+/opt/brew/opt/fzf/install
+/usr/local/bin/tmux set -g prefix C-s
+
+# Intalling universal ctags
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags
+
+echo 'bindkey "ç" fzf-cd-widget' >> ~/.zprofile
+
+# Need to move this out to a py install file
+pip3 install pynvim --upgrade
